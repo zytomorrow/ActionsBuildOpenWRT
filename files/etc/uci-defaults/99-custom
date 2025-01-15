@@ -1,0 +1,21 @@
+# Beware! This script will be in /rom/etc/uci-defaults/ as part of the image.
+# Uncomment lines to apply:
+
+
+# 去除kiddin包的外链
+uci -q set base_config.@status[0].links='0'
+uci commit base_config
+
+# 设置主机名映射 解决安卓原生TV首次连不上网的问题
+uci add dhcp domain
+uci set "dhcp.@domain[-1].name=time.android.com"
+uci set "dhcp.@domain[-1].ip=203.107.6.88"
+uci commit dhcp
+
+# 删除kwrt PW的映射
+uci delete "dhcp.@domain[-1].name=kwrt"
+uci delete "dhcp.@domain[-1].name=pw"
+uci commit dhcp
+
+rm -f /etc/uci-defaults/99-custom
+echo "All done!"
