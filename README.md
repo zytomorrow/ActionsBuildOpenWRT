@@ -22,8 +22,7 @@ Build OpenWRT By Github Actions
 - luci-app-log-viewer 
 - luci-app-mihomo 
 - luci-app-msd_lite 
-- luci-app-netdata 
-- luci-app-netspeedtest 
+- luci-app-netdata
 - luci-app-opkg 
 - luci-app-ramfree 
 - luci-app-syscontrol 
