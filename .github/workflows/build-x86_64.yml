@@ -23,6 +23,7 @@ env:
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
   OPENWRT_PATH: openwrt
+  CACHE_TOOLCHAIN: true
 
 jobs:
   build:
