@@ -22,6 +22,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
+  OPENWRT_PATH: openwrt
 
 jobs:
   build:
